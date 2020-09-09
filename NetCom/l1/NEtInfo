@@ -1,0 +1,444 @@
+Name: Remote1
+Default gateway: 172.31.65.0
+ 
+ 
+ 
+ 
+ 
+Interface: cua0
+Type: Console
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Not Connected
+Interface: eth0
+Type: Copper Ethernet
+MAC address: 67:62:30:38:49:8A
+IP address: 172.31.127.0
+Subnet mask: 255.255.128.0
+Link name: Remote1-TO-H1
+ 
+Name: R131
+Default gateway: 10.0.32.2
+ 
+ 
+ 
+ 
+ 
+Interface: cua0
+Type: Console
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Not Connected
+Interface: eth0
+Type: Copper Ethernet
+MAC address: BA:B2:1E:14:52:14
+IP address: 10.0.32.3
+Subnet mask: 255.0.0.0
+Link name: H3-TO-R131
+Interface: eth1
+Type: Copper Ethernet
+MAC address: B3:5A:BE:17:80:51
+IP address: 172.31.66.0
+Subnet mask: 255.255.128.0
+Link name: R131-TO-H1
+Interface: ser0
+Type: Serial
+MAC address: Not Applicable
+IP address: IP Address not set
+Subnet mask: 0.0.0.0
+Link name: Not Connected
+ 
+Name: H7
+Default gateway: Not Applicable
+ 
+ 
+ 
+ 
+ 
+Interface: eth0
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: H4-TO-H7
+Interface: eth1
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Not Connected
+Interface: eth2
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: H7-TO-H6
+Interface: eth3
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: H7-TO-Remote6
+Interface: eth4
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Not Connected
+ 
+Name: H6
+Default gateway: Not Applicable
+ 
+ 
+ 
+ 
+ 
+Interface: eth0
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: H6-TO-Remote5
+Interface: eth1
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Not Connected
+Interface: eth2
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: H7-TO-H6
+Interface: eth3
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Not Connected
+Interface: eth4
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Not Connected
+ 
+Name: R230
+Default gateway: 172.31.129.0
+ 
+ 
+ 
+ 
+ 
+Interface: cua0
+Type: Console
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Not Connected
+Interface: eth0
+Type: Copper Ethernet
+MAC address: 1D:B8:13:C7:AB:1E
+IP address: 10.0.32.2
+Subnet mask: 255.0.0.0
+Link name: H3-TO-R230
+Interface: eth1
+Type: Copper Ethernet
+MAC address: 9F:C0:13:81:38:93
+IP address: 172.31.130.0
+Subnet mask: 255.255.128.0
+Link name: R230-TO-H2
+Interface: ser0
+Type: Serial
+MAC address: Not Applicable
+IP address: IP Address not set
+Subnet mask: 0.0.0.0
+Link name: Not Connected
+ 
+Name: H4
+Default gateway: Not Applicable
+ 
+ 
+ 
+ 
+ 
+Interface: eth0
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: H1-TO-H4
+Interface: eth1
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: H4-TO-Remote4
+Interface: eth2
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Not Connected
+Interface: eth3
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: H4-TO-H7
+Interface: eth4
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Not Connected
+ 
+Name: H3
+Default gateway: Not Applicable
+ 
+ 
+ 
+ 
+ 
+Interface: eth0
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Remote3-TO-H3
+Interface: eth1
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Not Connected
+Interface: eth2
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: H3-TO-R230
+Interface: eth3
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: H3-TO-R131
+Interface: eth4
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Not Connected
+ 
+Name: R120
+Default gateway: 172.31.66.0
+ 
+ 
+ 
+ 
+ 
+Interface: cua0
+Type: Console
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Not Connected
+Interface: eth0
+Type: Copper Ethernet
+MAC address: 4A:B7:8F:8B:74:B3
+IP address: 172.31.65.0
+Subnet mask: 255.255.128.0
+Link name: H1-TO-R120
+Interface: eth1
+Type: Copper Ethernet
+MAC address: 9E:86:8F:6E:33:5E
+IP address: 172.31.129.0
+Subnet mask: 255.255.128.0
+Link name: R120-TO-H2
+Interface: ser0
+Type: Serial
+MAC address: Not Applicable
+IP address: IP Address not set
+Subnet mask: 0.0.0.0
+Link name: Not Connected
+ 
+Name: H2
+Default gateway: Not Applicable
+ 
+ 
+ 
+ 
+ 
+Interface: eth0
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: H2-TO-Remote2
+Interface: eth1
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Not Connected
+Interface: eth2
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: R230-TO-H2
+Interface: eth3
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: R120-TO-H2
+Interface: eth4
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Not Connected
+ 
+Name: Remote6
+Default gateway: 172.31.66.0
+ 
+ 
+ 
+ 
+ 
+Interface: cua0
+Type: Console
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Not Connected
+Interface: eth0
+Type: Copper Ethernet
+MAC address: 8C:48:40:5C:86:80
+IP address: 172.31.0.1
+Subnet mask: 255.255.128.0
+Link name: H7-TO-Remote6
+ 
+Name: H1
+Default gateway: Not Applicable
+ 
+ 
+ 
+ 
+ 
+Interface: eth0
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Remote1-TO-H1
+Interface: eth1
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: R131-TO-H1
+Interface: eth2
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Not Connected
+Interface: eth3
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: H1-TO-R120
+Interface: eth4
+Type: Copper Ethernet
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: H1-TO-H4
+ 
+Name: Remote5
+Default gateway: 172.31.66.0
+ 
+ 
+ 
+ 
+ 
+Interface: cua0
+Type: Console
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Not Connected
+Interface: eth0
+Type: Copper Ethernet
+MAC address: B7:98:AB:7A:6E:63
+IP address: 172.31.0.2
+Subnet mask: 255.255.128.0
+Link name: H6-TO-Remote5
+ 
+Name: Remote4
+Default gateway: 172.31.66.0
+ 
+ 
+ 
+ 
+ 
+Interface: cua0
+Type: Console
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Not Connected
+Interface: eth0
+Type: Copper Ethernet
+MAC address: C6:83:81:67:A4:90
+IP address: 172.31.0.3
+Subnet mask: 255.255.128.0
+Link name: H4-TO-Remote4
+ 
+Name: Remote3
+Default gateway: 10.0.32.2
+ 
+ 
+ 
+ 
+ 
+Interface: cua0
+Type: Console
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Not Connected
+Interface: eth0
+Type: Copper Ethernet
+MAC address: 4D:1B:88:79:A3:C5
+IP address: 10.0.39.0
+Subnet mask: 255.0.0.0
+Link name: Remote3-TO-H3
+ 
+Name: Remote2
+Default gateway: 172.31.129.0
+ 
+ 
+ 
+ 
+ 
+Interface: cua0
+Type: Console
+MAC address: Not Applicable
+IP address: Not Applicable
+Subnet mask: Not Applicable
+Link name: Not Connected
+Interface: eth0
+Type: Copper Ethernet
+MAC address: 55:29:62:51:86:AE
+IP address: 172.31.200.1
+Subnet mask: 255.255.128.0
+Link name: H2-TO-Remote2
+ 
