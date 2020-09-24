@@ -1,0 +1,339 @@
+R8
+GuiRouter
+424,212
+true
+4
+cua0|1|null|100.00
+eth0|0|R3-TO-R8|100.0|15:84:58:11:4D:B1|true
+eth1|0|R8-TO-R7|100.0|60:BE:C1:A0:4C:B5|true
+ser0|4|null|100.00|400000
+#config
+hostname R8
+no interface ser0 shutdown
+interface eth1 mac-address A6:49:BC:BE:94:70
+interface eth1 ip address 172.168.8.2 255.255.255.0
+no interface eth1 shutdown
+interface eth0 mac-address 87:26:34:AE:C2:57
+interface eth0 ip address 172.168.3.1 255.255.255.0
+no interface eth0 shutdown
+ip route default 0.0.0.0 172.168.8.1 eth0
+ip route 172.168.0.0 255.255.255.0 172.168.3.2 eth0
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+R7
+GuiRouter
+609,213
+true
+4
+cua0|1|null|100.00
+eth0|0|R8-TO-R7|100.0|1A:78:60:84:1C:1B|true
+eth1|0|R7-TO-R6|100.0|36:32:B0:51:B0:A7|true
+ser0|4|null|100.00|400000
+#config
+hostname R7
+no interface ser0 shutdown
+interface eth1 mac-address 7A:A3:8F:75:57:85
+interface eth1 ip address 172.168.7.2 255.255.255.0
+no interface eth1 shutdown
+interface eth0 mac-address 9B:6B:7B:62:B4:9F
+interface eth0 ip address 172.168.8.1 255.255.255.0
+no interface eth0 shutdown
+ip route default 0.0.0.0 172.168.7.1 eth0
+ip route 172.168.0.0 255.255.255.0 172.168.8.2 eth0
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+R6
+GuiRouter
+612,75
+true
+4
+cua0|1|null|100.00
+eth0|0|R7-TO-R6|100.0|C2:53:8F:17:6A:3E|true
+eth1|0|R5-TO-R6|100.0|94:5E:9F:4C:3A:81|true
+ser0|4|null|100.00|400000
+#config
+hostname R6
+no interface ser0 shutdown
+interface eth1 mac-address 52:79:B6:5D:46:30
+interface eth1 ip address 172.168.6.2 255.255.255.0
+no interface eth1 shutdown
+interface eth0 mac-address 56:2A:88:76:56:69
+interface eth0 ip address 172.168.7.1 255.255.255.0
+no interface eth0 shutdown
+ip route default 0.0.0.0 172.168.6.1 eth0
+ip route 172.168.0.0 255.255.255.0 172.168.7.2 eth0
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+R5
+GuiRouter
+512,75
+true
+4
+cua0|1|null|100.00
+eth0|0|R4-TO-R5|100.0|B4:AA:2C:3B:66:4B|true
+eth1|0|R5-TO-R6|100.0|A6:C0:13:73:A5:BC|true
+ser0|4|null|100.00|400000
+#config
+hostname R5
+no interface ser0 shutdown
+interface eth1 mac-address C2:45:57:5E:58:7F
+interface eth1 ip address 172.168.6.1 255.255.255.0
+no interface eth1 shutdown
+interface eth0 mac-address 8D:86:70:87:81:5C
+interface eth0 ip address 172.168.5.2 255.255.255.0
+no interface eth0 shutdown
+ip route default 0.0.0.0 172.168.5.1 eth0
+ip route 172.168.0.0 255.255.255.0 172.168.6.2 eth1
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+R4
+GuiRouter
+420,76
+true
+4
+cua0|1|null|100.00
+eth0|0|R4-TO-R9|100.0|86:45:56:98:2E:9F|true
+eth1|0|R4-TO-R5|100.0|5E:66:83:43:18:75|true
+ser0|4|null|100.00|400000
+#config
+hostname R4
+no interface ser0 shutdown
+interface eth1 mac-address 9F:4E:63:4F:7F:9C
+interface eth1 ip address 172.168.5.1 255.255.255.0
+no interface eth1 shutdown
+interface eth0 mac-address BD:66:7B:8E:A6:C1
+interface eth0 ip address 172.168.4.2 255.255.255.0
+no interface eth0 shutdown
+ip route default 0.0.0.0 172.168.4.1 eth0
+ip route 172.168.0.0 255.255.255.0 172.168.5.2 eth1
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+R3
+GuiRouter
+331,78
+true
+4
+cua0|1|null|100.00
+eth0|0|R2-TO-R3|100.0|48:83:87:97:6F:AB|true
+eth1|0|R3-TO-R8|100.0|57:3C:63:7A:81:5F|true
+ser0|4|null|100.00|400000
+#config
+hostname R3
+no interface ser0 shutdown
+interface eth1 mac-address 53:25:25:18:3D:6B
+interface eth1 ip address 172.168.3.2 255.255.255.0
+no interface eth1 shutdown
+interface eth0 mac-address 34:86:8F:1C:42:A2
+interface eth0 ip address 172.168.2.1 255.255.255.0
+no interface eth0 shutdown
+ip route default 0.0.0.0 172.168.3.1 eth0
+ip route 172.168.0.0 255.255.255.0 172.168.2.2 eth0
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+R2
+GuiRouter
+243,79
+true
+4
+cua0|1|null|100.00
+eth0|0|R1-TO-R2|100.0|45:33:47:A2:17:81|true
+eth1|0|R2-TO-R3|100.0|3B:AB:71:27:7A:8C|true
+ser0|4|null|100.00|400000
+#config
+hostname R2
+no interface ser0 shutdown
+interface eth1 mac-address AC:7C:61:26:32:24
+interface eth1 ip address 172.168.2.2 255.255.255.0
+no interface eth1 shutdown
+interface eth0 mac-address 7C:A8:30:61:3B:57
+interface eth0 ip address 172.168.1.1 255.255.255.0
+no interface eth0 shutdown
+ip route default 0.0.0.0 172.168.2.1 eth0
+ip route 172.168.0.0 255.255.255.0 172.168.1.2 eth0
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+R1
+GuiRouter
+158,74
+true
+4
+cua0|1|null|100.00
+eth0|0|H1-TO-R1|100.0|82:32:89:90:72:79|true
+eth1|0|R1-TO-R2|100.0|96:51:7F:A1:23:48|true
+ser0|4|null|100.00|400000
+#config
+hostname R1
+no interface ser0 shutdown
+interface eth1 mac-address BE:86:96:28:20:13
+interface eth1 ip address 172.168.1.2 255.255.255.0
+no interface eth1 shutdown
+interface eth0 mac-address 85:58:79:77:69:95
+interface eth0 ip address 172.168.0.1 255.255.255.0
+no interface eth0 shutdown
+ip route default 0.0.0.0 172.168.1.1 eth0
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+pc3
+GuiPC
+-6,212
+true
+2
+cua0|1|null|100.00
+eth0|0|pc3-TO-R9|100.0|26:1F:89:41:C6:50|true
+#config
+hostname pc3
+interface eth0 mac-address 2E:65:57:93:B7:4A
+interface eth0 ip address 172.168.9.2 255.255.255.0
+no interface eth0 shutdown
+ip route default 0.0.0.0 172.168.9.1 eth0
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+pc2
+GuiPC
+-3,112
+true
+2
+cua0|1|null|100.00
+eth0|0|pc2-TO-H1|100.0|9C:9A:77:5B:5F:48|true
+#config
+hostname pc2
+interface eth0 mac-address B7:8C:B2:B4:71:51
+interface eth0 ip address 172.168.0.3 255.255.255.0
+no interface eth0 shutdown
+ip route default 0.0.0.0 172.168.0.1 eth0
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+pc1
+GuiPC
+0,21
+true
+2
+cua0|1|null|100.00
+eth0|0|pc1-TO-H1|100.0|13:83:26:48:1B:52|true
+#config
+hostname pc1
+interface eth0 mac-address 4B:85:70:14:3C:48
+interface eth0 ip address 172.168.0.2 255.255.255.0
+no interface eth0 shutdown
+ip route default 0.0.0.0 172.168.0.1 eth0
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
+H1
+GuiHub
+74,81
+true
+5
+eth0|0|H1-TO-R1|100.0|#|false
+eth1|0|pc1-TO-H1|100.0|#|false
+eth2|0|pc2-TO-H1|100.0|#|false
+eth3|0|null|100.00|#|false
+eth4|0|null|100.00|#|false
+#config
+#endconfig
+#data
+#enddata
+R9
+GuiRouter
+321,212
+true
+4
+cua0|1|null|100.00
+eth0|0|pc3-TO-R9|100.0|4C:7A:46:56:14:5D|true
+eth1|0|R4-TO-R9|100.0|83:B0:B5:45:81:72|true
+ser0|4|null|100.00|400000
+#config
+hostname R9
+no interface ser0 shutdown
+interface eth1 mac-address 78:7E:B8:52:C5:3E
+interface eth1 ip address 172.168.4.1 255.255.255.0
+no interface eth1 shutdown
+interface eth0 mac-address 13:21:14:4D:21:21
+interface eth0 ip address 172.168.9.1 255.255.255.0
+no interface eth0 shutdown
+ip route default 0.0.0.0 172.168.4.2 eth0
+clock set 00:00:00 1 1 1970
+username root javanetsim
+router ospf area0
+#endconfig
+#data
+vlan.dat
+1
+
+#enddata
