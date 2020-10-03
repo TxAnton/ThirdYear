@@ -1,0 +1,28 @@
+#canvas_div{
+    float: left;
+    width: 25%;
+    min-width: 250px;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+#field{
+    position: center;
+    border: 1px solid #000000;
+    /*background-color:#d2d2d2;*/
+}
+#scaoreboard{
+    position: center;
+    float:right;
+    min-width: 250px;
+    width: 20%;
+}
+#next_fig{
+    /* margin-top: 30px;*/
+    position: center;
+    border: 1px solid #000000;
+    /*background-color: #d2d2d2;*/
+}
+
+#stuff{
+    float: left;
+}

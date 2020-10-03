@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="24087b1b-95e1-4976-9b46-a8caab4d27bb" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1hTJCxlMhsbR7yN0zry8UjgDXTd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="8.10.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="8.10.0" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/lab1" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/html" />
+    </key>
+  </component>
+  <component name="RunManager" selected="NW.js.Unnamed">
+    <configuration default="true" type="NodeJSConfigurationType" path-to-js-file="js/game.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="package.json" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="package.json" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="NodeWebKit" factoryName="NW.js" nameIsGenerated="true" inputPath="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Node.js.package.json" />
+      <item itemvalue="NW.js.Unnamed" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="24087b1b-95e1-4976-9b46-a8caab4d27bb" name="Default Changelist" comment="" />
+      <created>1600029031040</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600029031040</updated>
+      <workItem from="1600029033141" duration="149000" />
+      <workItem from="1600069978766" duration="10078000" />
+      <workItem from="1600615306266" duration="20829000" />
+      <workItem from="1600669593720" duration="14816000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="836" y="319" width="1084" height="733" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600075758170">
+      <screen x="0" y="0" width="1920" height="1052" />
+    </state>
+    <state x="836" y="319" width="1084" height="733" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1052@0.0.1920.1052" timestamp="1600075758170" />
+    <state x="1161" y="283" width="424" height="482" key="FileChooserDialogImpl" timestamp="1600616646453">
+      <screen x="0" y="0" width="1920" height="1052" />
+    </state>
+    <state x="1161" y="283" key="FileChooserDialogImpl/0.0.1920.1052/1920.0.1920.1080@0.0.1920.1052" timestamp="1600616646453" />
+    <state x="1161" y="283" width="424" height="482" key="FileChooserDialogImpl/0.0.1920.1052@0.0.1920.1052" timestamp="1600078165817" />
+    <state width="936" height="278" key="GridCell.Tab.0.bottom" timestamp="1600083325185">
+      <screen x="0" y="0" width="1920" height="1052" />
+    </state>
+    <state width="936" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1052@0.0.1920.1052" timestamp="1600083325185" />
+    <state width="936" height="278" key="GridCell.Tab.0.center" timestamp="1600083325184">
+      <screen x="0" y="0" width="1920" height="1052" />
+    </state>
+    <state width="936" height="278" key="GridCell.Tab.0.center/0.0.1920.1052@0.0.1920.1052" timestamp="1600083325184" />
+    <state width="936" height="278" key="GridCell.Tab.0.left" timestamp="1600083325183">
+      <screen x="0" y="0" width="1920" height="1052" />
+    </state>
+    <state width="936" height="278" key="GridCell.Tab.0.left/0.0.1920.1052@0.0.1920.1052" timestamp="1600083325183" />
+    <state width="936" height="278" key="GridCell.Tab.0.right" timestamp="1600083325185">
+      <screen x="0" y="0" width="1920" height="1052" />
+    </state>
+    <state width="936" height="278" key="GridCell.Tab.0.right/0.0.1920.1052@0.0.1920.1052" timestamp="1600083325185" />
+    <state x="928" y="160" key="SettingsEditor" timestamp="1600074390668">
+      <screen x="0" y="0" width="1920" height="1052" />
+    </state>
+    <state x="928" y="160" key="SettingsEditor/0.0.1920.1052@0.0.1920.1052" timestamp="1600074390668" />
+    <state x="804" y="299" width="301" height="450" key="refactoring.ChangeSignatureDialog" timestamp="1600643018793">
+      <screen x="0" y="0" width="1920" height="1052" />
+    </state>
+    <state x="804" y="299" width="301" height="450" key="refactoring.ChangeSignatureDialog/0.0.1920.1052/1920.0.1920.1080@0.0.1920.1052" timestamp="1600643018793" />
+    <state x="623" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1600675948432">
+      <screen x="0" y="0" width="1920" height="1052" />
+    </state>
+    <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1052/1920.0.1920.1080@0.0.1920.1052" timestamp="1600675948432" />
+    <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1052@0.0.1920.1052" timestamp="1600076547879" />
+  </component>
+</project>
