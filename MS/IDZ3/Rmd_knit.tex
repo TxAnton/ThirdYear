@@ -1,0 +1,463 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage{hyperref}
+\hypersetup{
+            pdftitle={HW\_3/9},
+            pdfauthor={Larin Anton},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+\title{HW\_3/9}
+\author{Larin Anton}
+\date{12/18/2020}
+
+\begin{document}
+\maketitle
+
+\hypertarget{ux438ux434ux437-3-ux441ux442ux430ux442ux430ux43d}{%
+\subsection{ИДЗ 3
+Статан}\label{ux438ux434ux437-3-ux441ux442ux430ux442ux430ux43d}}
+
+\hypertarget{ux438ux434ux437-9-ux43cux430ux442ux43fux430ux43aux435ux442ux44b}{%
+\subsection{ИДЗ 9
+Матпакеты}\label{ux438ux434ux437-9-ux43cux430ux442ux43fux430ux43aux435ux442ux44b}}
+
+\#Ход работы \#\#Графические представление
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{plot}\NormalTok{(x,y,}\DataTypeTok{main=}\StringTok{"Result"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Rmd_knit_files/figure-latex/unnamed-chunk-1-1.pdf}
+\(\lim_{x \to 0}\frac{\sin(x)}{x} = 1\)
+
+Линейная регрессионная модель: \(y = \beta_0 + \beta_1*x\)
+
+\hypertarget{section}{%
+\subsection{1}\label{section}}
+
+МНК оценка параметров сдвига \(\beta_0\) и масштаба \(\beta_1\)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{n<-}\KeywordTok{length}\NormalTok{(y)}
+\NormalTok{x0<-}\KeywordTok{array}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DataTypeTok{dim=}\NormalTok{n)}
+\NormalTok{X<-}\KeywordTok{t}\NormalTok{(}\KeywordTok{matrix}\NormalTok{(}\KeywordTok{c}\NormalTok{(x0,x),}\DataTypeTok{nrow=}\NormalTok{n,}\DataTypeTok{ncol=}\DecValTok{2}\NormalTok{))}
+\NormalTok{Y<-}\KeywordTok{as.matrix}\NormalTok{(y)}
+\NormalTok{S<-X}\OperatorTok{%*%}\KeywordTok{t}\NormalTok{(X)}
+\NormalTok{S1<-}\KeywordTok{solve}\NormalTok{(S)}
+\NormalTok{bhat<-S1}\OperatorTok{%*%}\NormalTok{X}\OperatorTok{%*%}\NormalTok{Y}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{ux440ux435ux437ux443ux43bux44cux442ux430ux442}{%
+\paragraph{Результат:}\label{ux440ux435ux437ux443ux43bux44cux442ux430ux442}}
+
+\(\beta_0 = 5.5889333\)\\
+\(\beta_1 = 0.5546667\)
+
+Нарисуем полученную регрессионную зависимость
+
+\includegraphics{Rmd_knit_files/figure-latex/unnamed-chunk-4-1.pdf}
+
+\hypertarget{section-1}{%
+\subsection{2}\label{section-1}}
+
+Построение несмещенной оценки дисперсии
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  res<-Y}\OperatorTok{-}\KeywordTok{t}\NormalTok{(X)}\OperatorTok{%*%}\KeywordTok{as.matrix}\NormalTok{(bhat)}
+\NormalTok{SS<-}\KeywordTok{sum}\NormalTok{(res}\OperatorTok{^}\DecValTok{2}\NormalTok{)}
+\NormalTok{s2<-SS}\OperatorTok{/}\NormalTok{(n}\DecValTok{-2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Результат: \(4.0704077\)
+
+Построение гистограммы с шагом h = 1.4 на базе ошибок
+
+\includegraphics{Rmd_knit_files/figure-latex/unnamed-chunk-6-1.pdf}
+
+Проверка гипотезы нормальности ошибок на уровне \(\alpha\) по \(\chi^2\)
+\(H_0: Y-X^T \beta\sim(0,\sigma^2)\)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{hh<-}\KeywordTok{hist}\NormalTok{(res,}\DataTypeTok{breaks=}\NormalTok{brk,}\DataTypeTok{plot=}\OtherTok{FALSE}\NormalTok{)}
+\NormalTok{nu<-hh}\OperatorTok{$}\NormalTok{counts}
+\NormalTok{breaks =}\StringTok{ }\NormalTok{hh}\OperatorTok{$}\NormalTok{breaks;}
+\NormalTok{r =}\StringTok{ }\KeywordTok{length}\NormalTok{(breaks) }\OperatorTok{-}\StringTok{ }\DecValTok{1}
+\NormalTok{l.b<-}\KeywordTok{length}\NormalTok{(brk)}
+\NormalTok{csq0<-}\ControlFlowTok{function}\NormalTok{(s)\{}
+  \ControlFlowTok{if}\NormalTok{ (s}\OperatorTok{>}\DecValTok{0}\NormalTok{)\{}
+\NormalTok{    p<-}\KeywordTok{pnorm}\NormalTok{(brk[}\DecValTok{2}\OperatorTok{:}\NormalTok{l.b],}\DecValTok{0}\NormalTok{,s)}\OperatorTok{-}\KeywordTok{pnorm}\NormalTok{(brk[}\DecValTok{1}\OperatorTok{:}\NormalTok{(l.b}\DecValTok{-1}\NormalTok{)],}\DecValTok{0}\NormalTok{,s)}
+    \KeywordTok{return}\NormalTok{(}\KeywordTok{sum}\NormalTok{((nu}\OperatorTok{-}\NormalTok{n}\OperatorTok{*}\NormalTok{p)}\OperatorTok{^}\DecValTok{2}\OperatorTok{/}\NormalTok{n}\OperatorTok{/}\NormalTok{p))}
+\NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ \{}
+    \KeywordTok{return}\NormalTok{(}\OtherTok{Inf}\NormalTok{)}
+\NormalTok{  \}}
+\NormalTok{\}}
+\NormalTok{csq.s<-}\KeywordTok{nlm}\NormalTok{(csq0,}\DataTypeTok{p=}\KeywordTok{sqrt}\NormalTok{(s2))}\OperatorTok{$}\NormalTok{minimum}
+\NormalTok{pv<-}\KeywordTok{pchisq}\NormalTok{(csq.s,r }\OperatorTok{-}\StringTok{ }\DecValTok{2}\NormalTok{,}\DataTypeTok{lower.tail=}\OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Результат: FALSE
+
+Оценим расстояние оценки до класса нормальных распределений оп
+Колмогорову
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{kolm.stat<-}\ControlFlowTok{function}\NormalTok{(s)\{}
+\NormalTok{  sres<-}\KeywordTok{sort}\NormalTok{(res)}
+\NormalTok{  fdistr<-}\KeywordTok{pnorm}\NormalTok{(sres,}\DecValTok{0}\NormalTok{,s)}
+  \KeywordTok{max}\NormalTok{(}\KeywordTok{abs}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{0}\OperatorTok{:}\NormalTok{(n}\DecValTok{-1}\NormalTok{))}\OperatorTok{/}\NormalTok{n}\OperatorTok{-}\NormalTok{fdistr),}\KeywordTok{abs}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\NormalTok{n)}\OperatorTok{/}\NormalTok{n}\OperatorTok{-}\NormalTok{fdistr))}
+\NormalTok{\}}
+\NormalTok{ks.dist<-}\KeywordTok{nlm}\NormalTok{(kolm.stat,}\DataTypeTok{p=}\KeywordTok{sqrt}\NormalTok{(s2))}\OperatorTok{$}\NormalTok{minimum}
+\end{Highlighting}
+\end{Shaded}
+
+Полученое расстояние: 0.0708533
+
+\includegraphics{Rmd_knit_files/figure-latex/unnamed-chunk-9-1.pdf}
+
+\hypertarget{section-2}{%
+\subsection{3}\label{section-2}}
+
+Построим ДИ для параметров с уровнем доверия \(1-\alpha (0.8)\)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{C<-}\KeywordTok{diag}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{))}
+\NormalTok{ph<-bhat}
+\NormalTok{V<-}\KeywordTok{diag}\NormalTok{(S1)}
+\NormalTok{xa<-}\KeywordTok{qt}\NormalTok{(}\DecValTok{1}\OperatorTok{-}\NormalTok{al}\OperatorTok{/}\DecValTok{2}\NormalTok{,n}\DecValTok{-2}\NormalTok{)}
+\NormalTok{s1<-}\KeywordTok{sqrt}\NormalTok{(s2)}
+\NormalTok{d<-xa}\OperatorTok{*}\NormalTok{s1}\OperatorTok{*}\KeywordTok{sqrt}\NormalTok{(V)}
+\NormalTok{CI<-}\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{lw=}\NormalTok{ph}\OperatorTok{-}\NormalTok{d,}\DataTypeTok{up=}\NormalTok{ph}\OperatorTok{+}\NormalTok{d)}
+\end{Highlighting}
+\end{Shaded}
+
+Для \(\beta_0: [4.7975981,6.3802685]\)\\
+Для \(\beta_1: [0.1177249,0.9916084]\)
+
+Доверительный эллипс можно вычислить как
+
+\(A\alpha=\{x,y:((xy)^T-\beta)^T*(XX^T)^{-1}*((xy)^T-\beta)\le qs^2x\alpha\}\)\\
+Где:
+
+\(\beta=\)
+
+\begin{verbatim}
+##           [,1]
+## [1,] 5.5889333
+## [2,] 0.5546667
+\end{verbatim}
+
+\((XX^T)=\)
+
+\begin{verbatim}
+##             [,1]        [,2]
+## [1,]  0.09111111 -0.04444444
+## [2,] -0.04444444  0.02777778
+\end{verbatim}
+
+\hypertarget{section-3}{%
+\subsection{4}\label{section-3}}
+
+Гипотеза независимости Y от X: \(H0: \beta1=0\)\\
+Критерий:\\
+\(\Phi(x)=\begin{cases} 0, \alpha<PV \\ 1,\alpha>PV \end{cases}\)
+
+Найдем статистику F-критерия и P-значение:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{FST<-bhat[}\DecValTok{2}\NormalTok{]}\OperatorTok{^}\DecValTok{2}\OperatorTok{/}\NormalTok{V[}\DecValTok{2}\NormalTok{]}\OperatorTok{/}\NormalTok{s2}
+\NormalTok{pv.f<-}\KeywordTok{pf}\NormalTok{(FST,}\DecValTok{1}\NormalTok{,n}\DecValTok{-2}\NormalTok{,}\DataTypeTok{lower.tail=}\OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Получим 2.7210012 и 0.1055659\\
+Результат: FALSE
+
+\hypertarget{section-4}{%
+\subsection{5}\label{section-4}}
+
+Добавим в модель член с \(X^2\):\\
+\(Y=\beta_1+\beta_2x+\beta_3x^2+\varepsilon\)
+
+Найдем МНК оценки
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x0 <-}\StringTok{ }\KeywordTok{array}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DataTypeTok{dim=}\NormalTok{n)}
+\NormalTok{X <-}\StringTok{ }\KeywordTok{t}\NormalTok{(}\KeywordTok{matrix}\NormalTok{(}\KeywordTok{c}\NormalTok{(x0, x, x}\OperatorTok{^}\DecValTok{2}\NormalTok{), }\DataTypeTok{nrow=}\NormalTok{n, }\DataTypeTok{ncol=}\DecValTok{3}\NormalTok{))}
+\NormalTok{Y <-}\StringTok{ }\KeywordTok{as.matrix}\NormalTok{(y)}
+\NormalTok{S <-}\StringTok{ }\NormalTok{X}\OperatorTok{%*%}\KeywordTok{t}\NormalTok{(X)}
+\NormalTok{S1 <-}\StringTok{ }\KeywordTok{solve}\NormalTok{(S)}
+\NormalTok{bht <-}\StringTok{ }\NormalTok{S1}\OperatorTok{%*%}\NormalTok{X}\OperatorTok{%*%}\NormalTok{Y}
+\end{Highlighting}
+\end{Shaded}
+
+\(\beta1=4.7528712\)\\
+\(\beta2=1.8515702\)\\
+\(\beta3=-0.3777389\)
+
+Нарисуем полученную регрессионную зависимость
+
+\includegraphics{Rmd_knit_files/figure-latex/unnamed-chunk-15-1.pdf}
+
+\hypertarget{section-5}{%
+\subsection{6}\label{section-5}}
+
+Несмещенная оценка дисперсии
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{res<-Y}\OperatorTok{-}\KeywordTok{t}\NormalTok{(X)}\OperatorTok{%*%}\KeywordTok{as.matrix}\NormalTok{(bht)}
+\NormalTok{SS<-}\KeywordTok{sum}\NormalTok{(res}\OperatorTok{^}\DecValTok{2}\NormalTok{)}
+\NormalTok{s2<-SS}\OperatorTok{/}\NormalTok{(n}\DecValTok{-2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Результат: 3.9820608
+
+Гистограмма на базе ошибок
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{brk<-}\KeywordTok{seq}\NormalTok{(}\KeywordTok{min}\NormalTok{(res), }\KeywordTok{max}\NormalTok{(res) }\OperatorTok{+}\StringTok{ }\NormalTok{h, }\DataTypeTok{by=}\NormalTok{h)}
+\KeywordTok{hist}\NormalTok{(res,}\DataTypeTok{breaks=}\NormalTok{brk)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Rmd_knit_files/figure-latex/unnamed-chunk-17-1.pdf}
+
+Проверка гипотезы нормальности ошибок на уровне \(\alpha\) по \(\chi^2\)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{l.b<-}\KeywordTok{length}\NormalTok{(brk)}
+\NormalTok{brk[}\DecValTok{1}\NormalTok{]<-}\StringTok{ }\OperatorTok{-}\OtherTok{Inf}
+\NormalTok{brk[l.b]<-}\OtherTok{Inf}
+\CommentTok{#r = length(breaks) - 1}
+\NormalTok{hh<-}\KeywordTok{hist}\NormalTok{(res,}\DataTypeTok{breaks=}\NormalTok{brk,}\DataTypeTok{plot=}\OtherTok{FALSE}\NormalTok{)}
+\NormalTok{nu<-hh}\OperatorTok{$}\NormalTok{counts}
+\NormalTok{breaks =}\StringTok{ }\NormalTok{hh}\OperatorTok{$}\NormalTok{breaks;}
+\NormalTok{r =}\StringTok{ }\KeywordTok{length}\NormalTok{(breaks) }\OperatorTok{-}\StringTok{ }\DecValTok{1}
+
+\NormalTok{l.b<-}\KeywordTok{length}\NormalTok{(brk)}
+\NormalTok{csq0<-}\ControlFlowTok{function}\NormalTok{(s)\{}
+  \ControlFlowTok{if}\NormalTok{ (s}\OperatorTok{>}\DecValTok{0}\NormalTok{)\{}
+\NormalTok{    p<-}\KeywordTok{pnorm}\NormalTok{(brk[}\DecValTok{2}\OperatorTok{:}\NormalTok{l.b],}\DecValTok{0}\NormalTok{,s)}\OperatorTok{-}\KeywordTok{pnorm}\NormalTok{(brk[}\DecValTok{1}\OperatorTok{:}\NormalTok{(l.b}\DecValTok{-1}\NormalTok{)],}\DecValTok{0}\NormalTok{,s)}
+    \KeywordTok{return}\NormalTok{(}\KeywordTok{sum}\NormalTok{((nu}\OperatorTok{-}\NormalTok{n}\OperatorTok{*}\NormalTok{p)}\OperatorTok{^}\DecValTok{2}\OperatorTok{/}\NormalTok{n}\OperatorTok{/}\NormalTok{p))}
+\NormalTok{  \} }\ControlFlowTok{else}\NormalTok{ \{}
+    \KeywordTok{return}\NormalTok{(}\OtherTok{Inf}\NormalTok{)}
+\NormalTok{  \}}
+\NormalTok{\}}
+\NormalTok{csq.s<-}\KeywordTok{nlm}\NormalTok{(csq0,}\DataTypeTok{p=}\KeywordTok{sqrt}\NormalTok{(s2))}\OperatorTok{$}\NormalTok{minimum}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in nlm(csq0, p = sqrt(s2)): NA/Inf replaced by maximum positive value
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{pv<-}\KeywordTok{pchisq}\NormalTok{(csq.s,r}\DecValTok{-3}\NormalTok{,}\DataTypeTok{lower.tail=}\OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Результат: FALSE
+
+Оценка расстояния до нормального рапределения по Колмагорову
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{kolm.stat<-}\ControlFlowTok{function}\NormalTok{(s)\{}
+\NormalTok{  sres<-}\KeywordTok{sort}\NormalTok{(res)}
+\NormalTok{  fdistr<-}\KeywordTok{pnorm}\NormalTok{(sres,}\DecValTok{0}\NormalTok{,s)}
+  \KeywordTok{max}\NormalTok{(}\KeywordTok{abs}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{0}\OperatorTok{:}\NormalTok{(n}\DecValTok{-1}\NormalTok{))}\OperatorTok{/}\NormalTok{n}\OperatorTok{-}\NormalTok{fdistr),}\KeywordTok{abs}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\OperatorTok{:}\NormalTok{n)}\OperatorTok{/}\NormalTok{n}\OperatorTok{-}\NormalTok{fdistr))}
+\NormalTok{\}}
+\NormalTok{ks.dist<-}\KeywordTok{nlm}\NormalTok{(kolm.stat,}\DataTypeTok{p=}\KeywordTok{sqrt}\NormalTok{(s2))}\OperatorTok{$}\NormalTok{minimum}
+
+
+\NormalTok{x2<-}\KeywordTok{c}\NormalTok{(}\DecValTok{0}\OperatorTok{:}\DecValTok{1000}\NormalTok{)}\OperatorTok{*}\NormalTok{(}\KeywordTok{max}\NormalTok{(res)}\OperatorTok{-}\KeywordTok{min}\NormalTok{(res))}\OperatorTok{/}\DecValTok{1000}\OperatorTok{+}\KeywordTok{min}\NormalTok{(res)}
+\NormalTok{y2<-}\KeywordTok{pnorm}\NormalTok{(x2,}\DecValTok{0}\NormalTok{,}\KeywordTok{nlm}\NormalTok{(kolm.stat,}\DataTypeTok{p=}\KeywordTok{sqrt}\NormalTok{(s2))}\OperatorTok{$}\NormalTok{estimate)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Rmd_knit_files/figure-latex/unnamed-chunk-20-1.pdf}
+
+Полученое расстояние: 0.0677388
+
+\hypertarget{section-6}{%
+\subsection{7}\label{section-6}}
+
+Построим ДИ для параметров
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{C<-}\KeywordTok{diag}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{))}
+\NormalTok{ph<-bht }\CommentTok{#t(C)%*%bhat}
+\NormalTok{V<-}\KeywordTok{diag}\NormalTok{(S1) }\CommentTok{# diag(C%*%S1%*%t(C))}
+\NormalTok{xa<-}\KeywordTok{qt}\NormalTok{(}\DecValTok{1}\OperatorTok{-}\NormalTok{al}\OperatorTok{/}\DecValTok{2}\NormalTok{,n}\DecValTok{-2}\NormalTok{)}
+\NormalTok{s1<-}\KeywordTok{sqrt}\NormalTok{(s2)}
+\NormalTok{d<-xa}\OperatorTok{*}\NormalTok{s1}\OperatorTok{*}\KeywordTok{sqrt}\NormalTok{(V)}
+\NormalTok{CI<-}\KeywordTok{data.frame}\NormalTok{(}\DataTypeTok{lw=}\NormalTok{ph}\OperatorTok{-}\NormalTok{d,}\DataTypeTok{up=}\NormalTok{ph}\OperatorTok{+}\NormalTok{d)}
+\end{Highlighting}
+\end{Shaded}
+
+Полученые интервалы:
+
+\begin{verbatim}
+##           lw        up
+## 1  3.4410260 6.0647164
+## 2  0.1622953 3.5408451
+## 3 -0.8533866 0.0979088
+\end{verbatim}
+
+Доверительный эллипсоид имеет форму
+
+\(A\alpha=\{x,y:((xyz)^T-\beta)^T*(XX^T)^{-1}*((xyz)^T-\beta)\le 1\}\)\\
+Где:\\
+\(\beta=\)
+
+\begin{verbatim}
+##            [,1]
+## [1,]  4.7528712
+## [2,]  1.8515702
+## [3,] -0.3777389
+\end{verbatim}
+
+\((XX^T)=\)
+
+\begin{verbatim}
+##             [,1]       [,2]        [,3]
+## [1,]  0.25594437 -0.3001346  0.07447286
+## [2,] -0.30013459  0.4244056 -0.11552266
+## [3,]  0.07447286 -0.1155227  0.03364738
+\end{verbatim}
+
+\hypertarget{section-7}{%
+\subsection{8}\label{section-7}}
+
+Гипотеза линейной регрессионной зависимости Y от X: \(H0: \beta3=0\)\\
+Критерий:\\
+\(\Phi(x)=\begin{cases} 0, \alpha<PV \\ 1,\alpha>PV \end{cases}\)
+
+Найдем статистику F-критерия и P-значение:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{FST<-bht[}\DecValTok{3}\NormalTok{]}\OperatorTok{^}\DecValTok{2}\OperatorTok{/}\NormalTok{S1[}\DecValTok{2}\NormalTok{,}\DecValTok{2}\NormalTok{]}\OperatorTok{/}\NormalTok{s2}
+\NormalTok{pv.f<-}\KeywordTok{pf}\NormalTok{(FST,}\DecValTok{1}\NormalTok{,n}\DecValTok{-2}\NormalTok{,}\DataTypeTok{lower.tail=}\OtherTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Получим 0.0844295 и 0.7726338\\
+Результат: TRUE
+
+\end{document}

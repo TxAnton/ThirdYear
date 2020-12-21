@@ -1,0 +1,177 @@
+% This LaTeX was auto-generated from MATLAB code.
+% To make changes, update the MATLAB code and export to LaTeX again.
+
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{epstopdf}
+\usepackage[table]{xcolor}
+\usepackage{matlab}
+
+\sloppy
+\epstopdfsetup{outdir=./}
+\graphicspath{ {./DZ1_images/} }
+
+\begin{document}
+
+\begin{matlabcode}
+syms C
+syms x
+syms y
+syms xi
+syms eta
+syms Sigma
+\end{matlabcode}
+
+
+\begin{matlabcode}
+
+\end{matlabcode}
+
+\begin{par}
+\begin{flushleft}
+Ларин Антон
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+Вар. 12 (83832020)
+\end{flushleft}
+\end{par}
+
+\begin{par}
+\begin{flushleft}
+Плотность двумерного нормального распределения имеет вид:
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+
+P_xi_eta = C * exp((-1/2)*(2*x^2 + 4*x*y + 5*y^2 - 12*y + 12))
+\end{matlabcode}
+
+
+\begin{enumerate}
+\setlength{\itemsep}{-1ex}
+   \item{\begin{flushleft} Вычислить вектор мат. ожиданий и ковариационные характеристики данного случайного вектора. \end{flushleft}}
+\end{enumerate}
+
+\begin{matlabcode}
+(2*x^2 + 4*x*y + 5*y^2 - 12*y + 12)
+2*(x+2)^2 + 4*(x+2)*(y-2) + 5*(y-2)^2
+\end{matlabcode}
+
+
+\begin{matlabcode}
+E = sym([-2;2])
+Sigma_ = [2,2;2,5]
+Sigma = Sigma_^(-1)
+d = sym(det(Sigma))
+cov_xi_xi = sym(Sigma(1,1))
+cov_eta_eta = sym(Sigma(2,2))
+cov_xi_eta = sym(Sigma(1,2))
+Rho = cov_xi_eta * 1/sqrt((cov_xi_xi*cov_eta_eta))
+C = 1/(2*pi * sym(sqrt(det(Sigma))))
+
+\end{matlabcode}
+
+
+\begin{matlabcode}
+syms x
+syms y
+\end{matlabcode}
+
+\begin{par}
+\begin{flushleft}
+2. Найти аффинное преобразование, переводящее исходный случайный вектор в стандартный нормальный
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+c = [sym(sqrt(2))*x + sym(sqrt(2))*y;sym(sqrt(3))*y - sym(sqrt(3))*2]
+vec = [x;y]-E
+B = sym([sqrt(2),sqrt(2);0,sqrt(3)])
+simplify(c) == simplify(B*vec)
+B*Sigma*B.'
+
+\end{matlabcode}
+
+
+\begin{matlabcode}
+
+\end{matlabcode}
+
+\begin{par}
+\begin{flushleft}
+3. Найти ортогональное преобразование, переводящее соответствующий центрированный случайный векторв вектор с незывисимыми компонентами
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+Sigma_
+[Q,lambda]=eig(Sigma_,"vector");
+labmda = sym(lambda)
+Q = sym(Q)
+
+D = Q*Sigma*Q.'
+sym(det(Sigma))
+\end{matlabcode}
+
+\begin{par}
+$$\left\lbrack \begin{array}{c}
+\xi_1 \\
+\xi_2 
+\end{array}\right\rbrack ~$$
+\end{par}
+
+\begin{matlabcode}
+disp('N(')
+disp(E/sym(sqrt(5)))
+disp(',')
+disp(D)
+disp(')')
+
+\end{matlabcode}
+
+
+\begin{par}
+\begin{flushleft}
+4. Вычислить характеристики совместного распределения случайного вектора ($-2\xi -5\eta ,-5\xi -5\eta$) и записать его плотность
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+B = sym([-2,-5;-5,-5])
+E_1 = B*E
+Sigma_1 = B*(Sigma)*B.'
+Sigma_1_ = Sigma_1^(-1)
+x_vec = [sym('x'),sym('y')].'
+P = (1/(sqrt(sym(2*pi))*sqrt(det(Sigma_1))))*exp(sym(-1/2)*(x_vec-E_1).'*Sigma_1_*(x_vec-E_1))
+
+\end{matlabcode}
+
+
+\begin{par}
+\begin{flushleft}
+5. Найти условное распределение $\xi$ при условии $\eta$
+\end{flushleft}
+\end{par}
+
+\begin{matlabcode}
+P_xi_eta = C * exp((-1/2)*(2*x^2 + 4*x*y + 5*y^2 - 12*y + 12))
+P_eta = int(P,sym('x'),-inf,inf)
+p_xi_g_eta = P/P_eta 
+simplify(p_xi_g_eta)
+
+\end{matlabcode}
+
+\end{document}
